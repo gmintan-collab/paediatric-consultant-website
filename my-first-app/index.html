@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr Gaik Min Tan | Consultant Paediatrician</title>
+  <meta name="description" content="Dr Gaik Min Tan, Consultant Paediatrician with expertise in paediatric cardiology. MBBS, MRCPCH, CCT (UK), EACVI Congenital Heart Disease Echocardiography.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c2a32;
+      --muted: #5b6b73;
+      --line: #d7e0e4;
+      --paper: #f7f5f1;
+      --white: #ffffff;
+      --teal: #1f6a73;
+      --teal-dark: #164e54;
+      --sage: #e7f0ee;
+      --gold: #b0894a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.65;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(247, 245, 241, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 16px;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
+
+    .brand span {
+      display: block;
+      font-family: "Source Sans 3", sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 22px;
+      align-items: center;
+    }
+
+    nav a {
+      color: var(--ink);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
+    nav a.btn {
+      color: var(--white);
+      background: var(--teal);
+      padding: 9px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    nav a.btn:hover {
+      background: var(--teal-dark);
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: var(--white);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 72px 0 56px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--teal);
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      line-height: 1.15;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 4vw, 4rem);
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      margin-bottom: 12px;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 40rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      text-decoration: none;
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border-color: var(--line);
+    }
+
+    .btn-ghost:hover {
+      background: var(--white);
+      text-decoration: none;
+    }
+
+    .portrait {
+      min-height: 420px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 24px 50px rgba(28, 42, 50, 0.18);
+      background: #d7e0e4;
+    }
+
+    .portrait img {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      object-fit: cover;
+      object-position: center 18%;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 48px;
+    }
+
+    .stat {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2rem;
+      color: var(--teal);
+    }
+
+    section {
+      padding: 72px 0;
+    }
+
+    .section-head {
+      max-width: 40rem;
+      margin-bottom: 36px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+    }
+
+    .alt {
+      background: var(--white);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .alt .card {
+      background: var(--white);
+    }
+
+    .card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .timeline {
+      list-style: none;
+    }
+
+    .timeline li {
+      position: relative;
+      padding: 0 0 28px 22px;
+      border-left: 2px solid var(--sage);
+    }
+
+    .timeline li:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 8px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--teal);
+    }
+
+    .timeline h3 {
+      font-size: 1.25rem;
+    }
+
+    .timeline .meta {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.88rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 4px;
+    }
+
+    .credentials {
+      display: grid;
+      gap: 12px;
+    }
+
+    .credential {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 16px;
+      padding: 16px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--paper);
+    }
+
+    .credential strong {
+      color: var(--teal);
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .note {
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .contact-box {
+      background: var(--sage);
+      border-radius: 24px;
+      padding: 36px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    form {
+      display: grid;
+      gap: 12px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font: inherit;
+      background: var(--white);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .fineprint {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 28px 0 40px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--line);
+      padding-top: 22px;
+    }
+
+    @media (max-width: 860px) {
+      .hero-grid,
+      .two-col,
+      .cards,
+      .stats,
+      .contact-box,
+      .credential {
+        grid-template-columns: 1fr;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        top: 72px;
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 16px;
+      }
+
+      nav.open {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .portrait {
+        min-height: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Dr Gaik Min Tan<span>Consultant Paediatrician</span></a>
+      <button class="menu-toggle" type="button" aria-label="Open menu">Menu</button>
+      <nav id="site-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#expertise">Expertise</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#credentials">Credentials</a></li>
+          <li><a href="#contact" class="btn">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">Consultant Paediatrician</p>
+            <h1>Specialist care for children, with expertise in paediatric cardiology.</h1>
+            <p class="lead">
+              I am Dr Gaik Min Tan, a consultant paediatrician. I look after children’s general health
+              and have particular expertise in paediatric cardiology, including congenital heart
+              disease echocardiography.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#contact">Request an enquiry</a>
+              <a class="btn btn-ghost" href="#credentials">View credentials</a>
+            </div>
+          </div>
+          <aside class="portrait">
+            <img src="images/dr-gaik-min-tan.jpg" alt="Professional portrait of Dr Gaik Min Tan, consultant paediatrician">
+          </aside>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <strong>MBBS, MRCPCH</strong>
+            Medical degree and paediatric membership
+          </div>
+          <div class="stat">
+            <strong>CCT (UK)</strong>
+            Certificate of Completion of Training
+          </div>
+          <div class="stat">
+            <strong>EACVI</strong>
+            Congenital Heart Disease Echocardiography
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="about">
+      <div class="wrap two-col">
+        <div class="section-head">
+          <p class="eyebrow">About</p>
+          <h2>A calm, thorough approach to children’s heart health.</h2>
+        </div>
+        <div>
+          <p>
+            I am a consultant paediatrician with expertise in cardiology. I see children with
+            heart murmurs, suspected congenital heart disease, palpitations, chest pain, and
+            other cardiac concerns, as well as wider paediatric presentations.
+          </p>
+          <p style="margin-top: 14px; color: var(--muted);">
+            Appointments are unhurried. I explain findings in plain language, discuss next
+            steps clearly, and work with families, general practitioners, and specialist teams
+            so that care stays joined up.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Clinical interests</p>
+          <h2>Paediatric cardiology</h2>
+          <p>Specialist assessment of children’s heart health, supported by training in congenital echocardiography.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Paediatric cardiology</h3>
+            <p>Assessment of heart murmurs, congenital heart disease, palpitations, chest pain, and other cardiac presentations in infants, children, and young people.</p>
+          </article>
+          <article class="card">
+            <h3>Congenital echocardiography</h3>
+            <p>EACVI certification in Congenital Heart Disease Echocardiography, used to assess heart structure and function with care and precision.</p>
+          </article>
+          <article class="card">
+            <h3>General paediatrics</h3>
+            <p>Consultant-level care for children’s wider health, with clear explanations and thoughtful follow-up for families.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt" id="experience">
+      <div class="wrap two-col">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Training and consultant practice</h2>
+          <p>UK-trained consultant paediatrician with a focus on children’s heart care.</p>
+        </div>
+        <ol class="timeline">
+          <li>
+            <p class="meta">Present</p>
+            <h3>Consultant Paediatrician</h3>
+            <p>Consultant paediatrician with expertise in cardiology, providing specialist assessment and ongoing care for children with cardiac and general paediatric needs.</p>
+          </li>
+          <li>
+            <p class="meta">United Kingdom</p>
+            <h3>Certificate of Completion of Training (CCT)</h3>
+            <p>Completed specialty training in the United Kingdom, leading to CCT and consultant-level paediatric practice.</p>
+          </li>
+          <li>
+            <p class="meta">Professional training</p>
+            <h3>MBBS and MRCPCH</h3>
+            <p>Medical degree (MBBS) and Membership of the Royal College of Paediatrics and Child Health (MRCPCH).</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="credentials">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Credentials</p>
+          <h2>Qualifications and professional standing</h2>
+          <p>Recognised training, echocardiography certification, and professional registration.</p>
+        </div>
+        <div class="credentials">
+          <div class="credential">
+            <strong>Qualifications</strong>
+            <span>MBBS; MRCPCH; EACVI certification in Congenital Heart Disease Echocardiography; CCT (UK).</span>
+          </div>
+          <div class="credential">
+            <strong>Registration</strong>
+            <span>General Medical Council (GMC), United Kingdom; Malaysian Medical Council (MMC).</span>
+          </div>
+          <div class="credential">
+            <strong>Memberships</strong>
+            <span>Royal College of Paediatrics and Child Health (RCPCH).</span>
+          </div>
+          <div class="credential">
+            <strong>Special interest</strong>
+            <span>Paediatric cardiology.</span>
+          </div>
+        </div>
+        <p class="note">This website is for professional introduction only. It is not a diagnosis service and must not be used in an emergency. In the UK, call 999 for emergencies or 111 for urgent advice.</p>
+      </div>
+    </section>
+
+    <section class="alt" id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Contact</p>
+          <h2>Get in touch</h2>
+          <p>Enquiries from families and referring colleagues are welcome.</p>
+        </div>
+        <div class="contact-box">
+          <div>
+            <h3 style="font-size: 1.6rem; margin-bottom: 10px;">Clinic details</h3>
+            <p>Consulting address, telephone, and email will be listed here once confirmed.</p>
+            <p>Please use the form for a first enquiry. Do not send confidential medical records until a secure clinic process is agreed.</p>
+            <p class="fineprint">This form does not replace emergency care.</p>
+          </div>
+          <form id="enquiry-form">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Brief reason for getting in touch (no urgent medical details)."></textarea>
+            <button class="btn btn-primary" type="submit">Send enquiry</button>
+            <p class="fineprint" id="form-status" hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© <span id="year"></span> Dr Gaik Min Tan. All rights reserved.</p>
+      <p>Consultant Paediatrician · Paediatric Cardiology</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    var toggle = document.querySelector(".menu-toggle");
+    var nav = document.getElementById("site-nav");
+    toggle.addEventListener("click", function () {
+      nav.classList.toggle("open");
+    });
+
+    document.querySelectorAll("#site-nav a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        nav.classList.remove("open");
+      });
+    });
+
+    document.getElementById("enquiry-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      var status = document.getElementById("form-status");
+      status.hidden = false;
+      status.textContent = "This demo form does not send email yet. Add your real address and I can connect it for you.";
+    });
+  </script>
+</body>
+</html>
